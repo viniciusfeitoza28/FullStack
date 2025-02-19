@@ -7,3 +7,9 @@ body{
 h3{ 
     color: white;text-align: left;
 }
+table, th, td {
+    border: 1px solid;
+  }
+  a{
+    color: aqua;
+}

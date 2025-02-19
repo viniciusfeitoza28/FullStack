@@ -1,6 +1,13 @@
 body{
     background-color: rgb(0, 0, 0);text-align: center;color: white;
 }
+
+h3{
+    text-align: left;
+}
+a:hover{
+    color: white;
+}
 a{
-    text-align: left;color: white;
+    color: aqua;
 }
