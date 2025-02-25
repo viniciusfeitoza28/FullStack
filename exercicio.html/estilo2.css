@@ -13,3 +13,6 @@ table, th, td {
   a{
     color: aqua;
 }
+.cor:hover{
+    color: white;
+}

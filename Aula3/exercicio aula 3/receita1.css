@@ -1,0 +1,24 @@
+.color{
+    background-color: #778899;
+}
+.inicio{
+    background-color: #C0C0C0;
+    border: 5px solid black;
+    position: relative;
+    top: 15px;
+    left: 15px;
+    
+}
+.inline{
+    display: inline;
+    padding: 5px;
+}
+.grid{
+    border: 5px solid black;
+    padding: 5px;
+    background-color: #C0C0C0 ;
+}
+.margin{
+    margin: 10 px;
+    padding: 10px;
+}
