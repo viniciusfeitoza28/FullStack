@@ -1,0 +1,45 @@
+.dotted{
+    border: 5px dotted blue;
+}
+.dashed{
+    border: 5px dashed red;
+}
+.solid{
+    border: 5px solid purple;
+}
+.margin{
+    margin: 10px
+}
+.radius_10{
+    border-radius: 10px;
+}
+.radius_20{
+    border-radius: 20px;
+}
+.radius_30{
+    border-radius: 30px;
+}
+.shadow_gray{
+    box-shadow: 5px 5px gray;
+}
+.shadow_green{
+    box-shadow: 5px 5px green;
+}
+.shadow_blue{
+    box-shadow: 5px 5px blue;
+}
+.margin{
+    margin: 10px
+}
+.padding{
+    padding: 10px;
+}
+.width_200{
+    width:200px ;
+}
+.display_inline{
+    display: inline;
+}
+.discplay_block{
+    display: block;
+}
