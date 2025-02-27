@@ -19,6 +19,19 @@
     background-color: #C0C0C0 ;
 }
 .margin{
-    margin: 10 px;
+    margin: 10px;
     padding: 10px;
+}
+.quadrado{
+    list-style-type: circle;
+}
+.relative{
+    position: relative;
+    top: 20px;
+}
+.vsf{
+    position: relative;
+    padding: 5px;
+    height: 10px;
+    display: inline;
 }
