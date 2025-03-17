@@ -1,0 +1,12 @@
+.flexcontainer {
+    display: flex;
+}
+.flexcontainer div {
+    display: flex;
+    background-color: #fceacd;
+    border-style: solid;
+    border-color: blue;
+    width: 700px;
+    height: 350px;
+    justify-content: space-between;
+}
