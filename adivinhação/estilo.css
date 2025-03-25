@@ -1,0 +1,20 @@
+body{
+    background-color: aquamarine;
+}
+
+.centro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.centro-container div {
+
+}
+.fonte{
+    font-size: 20px;
+}
+.padding{
+    padding: 5px;
+    width: 250px;
+}
