@@ -1,7 +1,8 @@
 let i = Math.random() * 100;
 let x =Math.floor(i);
 console.log(x)
-
+//tira o alert depois
+alert(x)
 
 
 function verificar() {
