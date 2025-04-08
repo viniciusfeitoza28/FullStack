@@ -3,6 +3,7 @@ body{
 }
 #jota {
     background-color: aliceblue;
+    border: solid black;
 }
 
 .div-container{

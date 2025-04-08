@@ -1,6 +1,10 @@
 let jota = document.getElementById('jota')
 let ctx = jota.getContext('2d')
 
+
+
+
+
 ctx.beginPath();
 ctx.lineWidth = 1;
 ctx.fillStyle = 'blue';
