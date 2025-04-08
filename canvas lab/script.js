@@ -255,6 +255,9 @@ ctx.closePath();
 // ctx.strokeText("Canvas",150,50)
 // ctx.closePath();
 
+<<<<<<< HEAD
+//casinha
+=======
 //casinha
 
 let canvas2 = document.getElementById('canvas2');
@@ -299,3 +302,4 @@ ctx2.lineTo(150,130) //vertice 2(baixo esquerda)
 ctx2.lineTo(180,150)//vertice 3(baixo direita)
 ctx2.fill()
 ctx2.closePath()
+>>>>>>> eddef124bb749179f798f6f2686245ceb8098514

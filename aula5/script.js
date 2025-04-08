@@ -1,5 +1,5 @@
 //window.alert("Hello World!")
-console.log("hello world!");
+//console.log("hello world!");
 
 //let nome = prompt("Qual seu nome?");
 //console.log (nome);
@@ -33,13 +33,13 @@ console.log("hello world!");
     //console.log(i)
 //}
 
-console.log('exercicio 4')
-let num = parseInt (prompt("Digite um número inteiro"));
-if(num < 0){
-    console.log("numero invalido")
-}
-let mult = 1;
-for(let i = num; i > 0; i--){
-    mult *= i;
-    console.log(i,mult)
-}
+//console.log('exercicio 4')
+//let num = parseInt (prompt("Digite um número inteiro"));
+//if(num < 0){
+    //console.log("numero invalido")
+//}
+//let mult = 1;
+//for(let i = num; i > 0; i--){
+    //mult *= i;
+    //console.log(i,mult)
+//}
