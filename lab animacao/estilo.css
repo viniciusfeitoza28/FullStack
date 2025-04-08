@@ -1,0 +1,14 @@
+body{
+    background-color: bisque;
+}
+.divcontainer{
+    display: flex;
+}
+div{
+    display: flex;
+    justify-content: center;
+}
+#canvas{
+    background-color: beige;
+    border: solid black;
+}
