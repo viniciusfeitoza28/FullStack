@@ -1,8 +1,8 @@
 body{
-    background-color: beige;
+    background-color: aqua;
 }
-#jota {
-    background-color: aliceblue;
+#canvas {
+    background-color: white;
     border: solid black;
 }
 
@@ -16,4 +16,7 @@ div{
 }
 #canvas2{
     background-color: lightgreen;
+}
+.fonte{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
