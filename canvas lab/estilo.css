@@ -13,3 +13,6 @@ div{
     display: flex;
     justify-content: center;
 }
+#canvas2{
+    background-color: lightgreen;
+}
