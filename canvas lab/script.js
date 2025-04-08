@@ -178,3 +178,5 @@ ctx.textAlign = "center";
 ctx.fillText("Canvas",150,50);
 ctx.strokeText("Canvas",150,50)
 ctx.closePath();
+
+//casinha
