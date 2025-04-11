@@ -27,12 +27,18 @@ class retangulo{
 let quadrado = new retangulo('blue','red',3,140,140,20,20);
 quadrado.desenhe(ctx)
 
-addEventListener('mousemove',function(evento) {
-    rect = canvas.getboundingclientrect();
-    x_mouse = evento.clientX - rect.left;
-    y_mouse = evento.clientY - rect.top;
+document.addEventListener('mousemove',function(evento) {
+    let rect = canvas.getBoundingClientRect()
+    let x_mouse = evento.clientX - rect.left;
+    let y_mouse = evento.clientY - rect.top;
+    
     console.log(x_mouse,y_mouse)
+    quadrado.x = x_mouse;
+    quadrado.y = y_mouse;
 })
+
+
+
 
 // let bolafodase = {
 //     x: 0, 
