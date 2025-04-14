@@ -8,7 +8,7 @@ div{
     display: flex;
     justify-content: center;
 }
-#canvas{
+#meuCanvas{
     background-color: beige;
     border: solid black;
 }
