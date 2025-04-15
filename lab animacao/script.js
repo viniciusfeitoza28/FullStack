@@ -2,7 +2,7 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
 const img = new Image();
-img.src = "bolafodase.webp"; 
+img.src = "bola.webp"; 
 
 let mouseX = 150;
 let mouseY = 150;
@@ -33,3 +33,4 @@ function desenhar() {
 img.onload = () => {
   desenhar();
 };
+
