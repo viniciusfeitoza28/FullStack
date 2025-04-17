@@ -1,0 +1,21 @@
+body{
+    background-color: black;
+}
+body{
+    color: white;
+}
+h3{ 
+    color: white;
+    text-align: left;
+}
+table, th, td {
+    border: 3px solid;
+    font-size: 25px;
+  }
+a{
+    color: white;
+    
+}
+a:hover{
+    color: red;
+}

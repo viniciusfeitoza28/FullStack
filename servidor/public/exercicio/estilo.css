@@ -1,5 +1,7 @@
 body{
-    background-color: #808080;text-align: center;color: white;
+    background-color: black;
+    text-align: center;
+    color: white;
 }
 
 h3{
@@ -9,12 +11,12 @@ a:hover{
     color: red;
 }
 a{
-    color: black;
+    color: white;
     position: fixed;
 }
 .nome{
     display: inline;
-    color: black;
+    color: white;
     font-size: 40px;
 }
 .font{
@@ -24,9 +26,7 @@ a{
     padding-top: 20px;
 }
 .cor{
-    color: black;
+    color: white;
 }
-.lista{ 
-    border: solid;
-    border-color: black;
-}
+
+

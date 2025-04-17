@@ -107,8 +107,8 @@ circulo(1,'dodgerblue',90,297,25,1.5,2.5)
 ctx2.beginPath()
 ctx2.lineWidth = 1
 ctx2.fillStyle = 'rgb(228, 56, 85)'
-ctx2.moveTo(120,150) //vertice 1(cima)
-ctx2.lineTo(150,130) //vertice 2(baixo esquerda)
-ctx2.lineTo(180,150)//vertice 3(baixo direita)
+ctx2.moveTo(120,150) 
+ctx2.lineTo(150,130) 
+ctx2.lineTo(180,150)
 ctx2.fill()
 ctx2.closePath()
