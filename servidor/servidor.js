@@ -49,5 +49,10 @@ app.post("/cadastrar", function(requisicao,resposta){
     
 }) 
 
+app.get("/for_ejs",function(requisicao,resposta){
+    let valor = requisicao.query.valor;
+    resposta.render("exemplo_for",{valor});
+})
+
 
 
