@@ -10,9 +10,17 @@ h3{
 a:hover{
     color: red;
 }
+container{
+    display: flex;
+    justify-content: space-between;
+
+}
+
 a{
-    color: white;
+    display: flex;
+    justify-content: space-between;
     position: fixed;
+    color:white;
 }
 .nome{
     display: inline;

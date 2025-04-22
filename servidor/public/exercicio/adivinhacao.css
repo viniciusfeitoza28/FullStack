@@ -8,8 +8,8 @@ body{
     justify-content: center;
     align-items: center;
 }
-.centro-container div {
-
+.centro-container div{
+    display: flex;
 }
 .fonte{
     font-size: 20px;
