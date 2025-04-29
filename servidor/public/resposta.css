@@ -20,3 +20,11 @@ p{
     justify-content: center;
     justify-self: center;
 }
+
+h1{  
+    font-size: 30px;
+    padding: 10px;
+    margin: 10px;
+    justify-content: center;
+    justify-self: center;
+}

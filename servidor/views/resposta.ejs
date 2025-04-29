@@ -1,18 +1,25 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Cadastro</title>
-        <meta charset="UTF-8">
-        <link href="ejs.css" rel="stylesheet">
-    </head>
-    <body>
-        <h1 id="center">Cadastro</h1>
-        <div class="pcontainer">
-            <p>Nome: <%=nome %></p>
-            <p>Login: <%=login %></p>
-            <p>Senha: <%=senha %></p>
-            <p>Nascimento: <%=nasc %></p>
-         </div>
-        
-    </body>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Resposta</title>
+    <link rel="stylesheet" href="resposta.css">
+</head>
+<body>
+    
+
+    <% if (erro) { %>
+        <h2><%= erro %></h2>
+        <a href="/login">Tentar novamente</a>
+    <% } else { %>
+        <% if (nome) { %>
+            <h1>Bem vindo!</h1>
+            <p><strong>Nome:</strong> <%= nome %></p>
+        <% } %>
+        <p><strong>Usuário:</strong> <%= user %></p>
+        <p><strong>Senha:</strong> <%= senha %></p>
+
+        <a href="/login">Voltar para login</a> | <a href="/cadastrar">Cadastrar novo</a>
+    <% } %>
+</body>
 </html>
