@@ -1,0 +1,17 @@
+body{
+    background-color: bisque;
+}
+
+.divcontainer{
+    display: flex;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+}
+
+#center{
+    display: flex;
+    justify-content: center;
+}

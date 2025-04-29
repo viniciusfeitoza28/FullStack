@@ -1,10 +1,22 @@
 body{
-    background-color: aquamarine;
+    background-color: bisque;
 }
 
-div{
-    background-color: beige;
+
+#center{
+    display: flex;
+    justify-content: center;
+}
+
+.divcontainer{
+    display: flex;
+
+}
+
+p{  
+    font-size: 20px;
     padding: 10px;
     margin: 10px;
-    display: inline;
+    justify-content: center;
+    justify-self: center;
 }
