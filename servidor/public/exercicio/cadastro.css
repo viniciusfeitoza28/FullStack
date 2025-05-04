@@ -2,8 +2,10 @@ body{
     background-color: bisque;
 }
 
+
 .divcontainer{
     display: flex;
+    flex-direction: column;
 }
 
 div{
@@ -14,4 +16,15 @@ div{
 #center{
     display: flex;
     justify-content: center;
+}
+
+.borda{
+    border: 2px solid black;
+    width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #f0e0c0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    
 }
