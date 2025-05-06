@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cadastrar Post</title>
+  <style>
+    body {
+      background-color: #f5f5f5; /* Cor de fundo */
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center; /* Centralização */
+      align-items: center; /* Centralização */
+      height: 100vh;
+      margin: 0;
+    }
+    .form-container {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1 style="text-align: center;">Novo Post</h1>
+    <form action="/cadastrar-post" method="POST">
+      <input type="text" name="titulo" placeholder="Título" required>
+      <input type="text" name="resumo" placeholder="Resumo" required>
+      <textarea name="conteudo" placeholder="Conteúdo" rows="5" required></textarea>
+      <button type="submit">Cadastrar Post</button>
+    </form>
+  </div>
+</body>
+</html>

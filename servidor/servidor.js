@@ -7,6 +7,7 @@ let bodyParser = require("body-parser")
 const MongoClient = mongodb.MongoClient;
 const uri = 'mongodb+srv://viniftz:giovanna28@vini.2xzk4qv.mongodb.net/?retryWrites=true&w=majority&appName=Vini'
 const client = new MongoClient(uri, { useNewUrlParser: true });
+const path = require('path');
 
 var dbo = client.db("Vini");
 var usuarios = dbo.collection("usuarios");
@@ -143,3 +144,60 @@ app.post("/login", function(req,res){
 //     })
 // })
 
+
+//---------------------------------------------------------------------------------------------------------------------------------
+
+
+var dbo = client.db("Vini");
+var usuarios = dbo.collection("blog");
+
+async function connectDB() {
+  try {
+    await client.connect();
+    db = client.db('blog');
+    postsCollection = db.collection('posts');
+    console.log('Conectado ao MongoDB!');
+    
+    // Rotas
+    app.get('/', (req, res) => {
+      res.redirect('/exercicio/Projects.html'); // Redireciona para projetos
+    });
+
+    app.get('/blog', async (req, res) => {
+      try {
+        const posts = await postsCollection.find().sort({ createdAt: -1 }).toArray();
+        res.render('blog', { posts }); // Página dinâmica com EJS
+      } catch (err) {
+        res.status(500).send('Erro ao carregar posts');
+      }
+    });
+
+    app.get('/cadastrar_post', (req, res) => {
+      res.sendFile(path.join(__dirname, 'public', 'exercicio', 'cadastrar_post.html'));
+    });
+
+    app.post('/cadastrar-post', async (req, res) => {
+      try {
+        const { titulo, resumo, conteudo } = req.body;
+        await postsCollection.insertOne({
+          titulo,
+          resumo,
+          conteudo,
+          createdAt: new Date()
+        });
+        res.redirect('/blog');
+      } catch (err) {
+        res.status(500).send('Erro ao cadastrar post');
+      }
+    });
+
+    // Inicia servidor na porta 80
+    app.listen(80, () => {
+      console.log('Servidor rodando na porta 80');
+    });
+  } catch (err) {
+    console.error('Erro ao conectar ao MongoDB:', err);
+  }
+}
+
+connectDB();
