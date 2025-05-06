@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Posts do Blog</h1>
+    <a href="/cadastrar_post.html"><button>Criar Novo Post</button></a>
+    
+    <% if (posts.length === 0) { %>
+      <p>Nenhum post encontrado.</p>
+    <% } else { %>
+      <% posts.forEach(post => { %>
+        <div class="post">
+          <h2><%= post.titulo %></h2>
+          <h4><%= post.resumo %></h4>
+          <p><%= post.conteudo %></p>
+        </div>
+      <% }); %>
+    <% } %>
+  </div>
+</body>
+</html>

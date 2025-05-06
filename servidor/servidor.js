@@ -32,23 +32,23 @@ console.log("Servidor Rodando..." .rainbow);
 //     resposta.redirect("exercicio/Home.html")
 // })
 
-// // app.get("/cadastrar", function(requisicao,resposta){
-// //     let nome = requisicao.query.nome;
-// //     let login = requisicao.query.login;
-// //     let senha = requisicao.query.senha;
-// //     let nasc = requisicao.query.nascimento;
+// app.get("/cadastrar", function(requisicao,resposta){
+//     let nome = requisicao.query.nome;
+//     let login = requisicao.query.login;
+//     let senha = requisicao.query.senha;
+//     let nasc = requisicao.query.nascimento;
 
-// //     console.log(nome,login,senha,nasc)
+//     console.log(nome,login,senha,nasc)
     
-// // })
+// })
 
 
 
 
 // app.post("/cadastrar", function(requisicao,resposta){
-//     let nome = requisicao.body.nome;
-//     let login = requisicao.body.login;
-//     let senha = requisicao.body.senha;
+//     let nome = requisicao.body.Nome;
+//     let login = requisicao.body.Login;
+//     let senha = requisicao.body.Senha;
 //     let nasc = requisicao.body.nascimento;
 
 //     console.log(nome,login,senha,nasc);
@@ -92,32 +92,32 @@ app.get("/login", function(req,res){
 
 // Cadastro de usuário
 app.post("/cadastrar", function(req,res){
-    let nome = req.body.Nome;
-    let user = req.body.User;
-    let senha = req.body.Senha;
-    console.log("Cadastro:", nome, user, senha);
+    let Nome = req.body.Nome;
+    let User = req.body.User;
+    let Senha = req.body.Senha;
+    console.log("Cadastro:", Nome, User, Senha);
 
     // Adiciona o novo usuário
-    pessoas.push({nome, user, senha});
+    pessoas.push({Nome, User, Senha});
 
     res.redirect("/login"); // Agora redireciona direto para a tela de login
 });
 
 // Login de usuário
 app.post("/login", function(req,res){
-    let user  = req.body.User;
-    let senha = req.body.Senha;
-    console.log("Tentativa de login:", user, senha);
+    let User  = req.body.User;
+    let Senha = req.body.Senha;
+    console.log("Tentativa de login:", User, Senha);
 
     // Procura usuário na lista
-    let encontrado = pessoas.find(u => u.user === user && u.senha === senha);
+    let encontrado = pessoas.find(u => u.User === User && u.Senha === Senha);
 
     if (encontrado) {
         // Login correto
-        res.render("resposta", {nome: encontrado.nome, user: encontrado.user, senha: encontrado.senha, erro: null});
+        res.render("resposta", {nome: encontrado.Nome, user: encontrado.User, senha: encontrado.Senha, erro: null});
     } else {
         // Login errado
-        res.render("resposta", {nome: null, user: null, senha: null, erro: "Usuário ou senha incorretos!"});
+        res.render("resposta", {Nome: null, User: null, Senha: null, erro: "Usuário ou senha incorretos!"});
     }
 });
 
@@ -142,5 +142,4 @@ app.post("/login", function(req,res){
 //         }
 //     })
 // })
-
 

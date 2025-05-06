@@ -6,16 +6,15 @@
     <link rel="stylesheet" href="cadastro.css">
 </head>
 <body>
-    <div class="borda divcontainer">
-        <div class="div"><h1>Cadastro de Usuário</h1></div>
+    <div class="div"><h1>Cadastro de Usuário</h1></div>
 
-    <div class="div">
+    <div class="div1">
         <form method="post" action="/cadastrar">
             <p>Nome: <input type="text" name="Nome" required></p>
-            <p>User: <input type="text" name="User" required></p> 
+            <p>User: <input type="text" name="User" required></p> <!-- Corrigido "User" -->
             <p>Senha: <input type="password" name="Senha" required></p>
             <br>
-            <button type="submit">Cadastrar</button> 
+            <button type="submit">Cadastrar</button> <!-- Adicionado botão para enviar cadastro -->
         </form>
     </div>
 
@@ -24,7 +23,6 @@
         <form action="/login" method="get" id="form">
             <input type="submit" value="Fazer login!">
         </form>
-    </div>
     </div>
 </body>
 </html>
