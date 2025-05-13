@@ -1,0 +1,26 @@
+{
+  "name": "servidor_bd_completo",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Vinícius Feitoza",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "mongodb": "4.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viniciusfeitoza28/FullStack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/viniciusfeitoza28/FullStack/issues"
+  },
+  "homepage": "https://github.com/viniciusfeitoza28/FullStack#readme",
+  "description": ""
+}

@@ -8,6 +8,8 @@ body {
     margin: 0;
   }
   .form-container {
+    display: flex;
+    flex-direction: column;
     background: white;
     padding: 30px;
     border-radius: 8px;
@@ -15,6 +17,10 @@ body {
     width: 100%;
     max-width: 500px;
   }
+  form{
+    justify-content: center;
+  }
+ 
   input, textarea {
     width: 100%;
     padding: 10px;
@@ -31,3 +37,9 @@ body {
     border-radius: 4px;
     cursor: pointer;
   }
+
+#center{
+  display: flex;
+  justify-content: center;
+}
+

@@ -5,7 +5,7 @@ var mongodb = require("mongodb");
 let bodyParser = require("body-parser")
 
 const MongoClient = mongodb.MongoClient;
-const uri = 'mongodb+srv://viniftz:giovanna28@vini.2xzk4qv.mongodb.net/?retryWrites=true&w=majority&appName=Vini'
+const uri = 'mongodb+srv://viniftz:gigi28@vini.2xzk4qv.mongodb.net/?retryWrites=true&w=majority&appName=Vini'
 const client = new MongoClient(uri, { useNewUrlParser: true });
 const path = require('path');
 
@@ -25,13 +25,13 @@ server.listen(80);
 console.log("Servidor Rodando..." .rainbow);
 
 
-// app.get("/inicio",function(requisicao,resposta){
-//     resposta.redirect("exercicio/Home.html")
-// })
+app.get("/inicio",function(requisicao,resposta){
+    resposta.redirect("exercicio/Home.html")
+})
 
-// app.post("/inicio", function(requisicao,resposta){
-//     resposta.redirect("exercicio/Home.html")
-// })
+app.post("/inicio", function(requisicao,resposta){
+    resposta.redirect("exercicio/Home.html")
+})
 
 // app.get("/cadastrar", function(requisicao,resposta){
 //     let nome = requisicao.query.nome;
@@ -66,7 +66,7 @@ console.log("Servidor Rodando..." .rainbow);
 //         }
 //     })
 
-//     // resposta.render("resposta",{nome,login,senha,nasc});
+    // resposta.render("resposta",{nome,login,senha,nasc});
     
 // }) 
 
@@ -121,6 +121,52 @@ app.post("/login", function(req,res){
         res.render("resposta", {Nome: null, User: null, Senha: null, erro: "Usuário ou senha incorretos!"});
     }
 });
+
+app.post('/atualizar_senha',function(requisicao,resposta){
+  let login = requisicao.body.login;
+  let senha = requisicao.body.senha;
+  let novasenha = requisicao.body.novasenha;
+
+  let data = {db_login: login, db_senha: senha }
+  let new_data = { $set: {db_senha: novasenha}}
+
+  usuarios.updateOne(data,new_data, function(err,result){
+    console.log(result)
+    console.log(data)
+    console.log(new_data)
+    if (result.modifiedCount == 0) {
+      resposta.render('respostalogin', {status: "Usuário/senha não encontrado!"})
+    }else if (err) {
+      resposta.render('respostalogin', {status: "Erro ao atualizar usuário!"})
+    }else {
+      resposta.render('respostalogin', {status: "Usuário atualizado com sucesso!"})        
+    };
+  })
+  
+
+})
+
+app.post('/remover_usuario',function(requisicao,resposta){
+  let login = requisicao.body.login;
+  let senha = requisicao.body.senha;
+
+  let data = {db_login: login, db_senha: senha }
+
+  usuarios.deleteOne(data,function(err,result){
+    console.log(result)
+
+    if (result.modifiedCount == 0) {
+      resp.render('respostalogin', {status: "Usuário/senha não encontrado!"})
+    }else if (err) {
+      resp.render('respostalogin', {status: "Erro ao remover usuário!"})
+    }else {
+      resp.render('respostalogin', {status: "Usuário removido com sucesso!"})        
+    };
+  
+  })
+
+  })
+
 
 
 //--------------------
@@ -201,3 +247,6 @@ async function connectDB() {
 }
 
 connectDB();
+
+//----------------------------------------------------------------------------------------
+
