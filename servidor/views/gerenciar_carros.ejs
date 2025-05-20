@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gerenciar Carros</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerenciar Carros</h1>
+        
+        <!-- Formulário de Cadastro -->
+        <h2>Cadastrar Novo Carro</h2>
+        <form action="/cadastrar_carro" method="post">
+            <input type="text" name="marca" placeholder="Marca" required>
+            <input type="text" name="modelo" placeholder="Modelo" required>
+            <input type="number" name="ano" placeholder="Ano" required>
+            <input type="number" name="qtde" placeholder="Quantidade" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <!-- Formulário de Atualização/Remoção/Venda -->
+        <h2>Gerenciar Carro Existente</h2>
+        <form action="/gerenciar_carros" method="post">
+            <input type="text" name="marca" placeholder="Marca" required>
+            <input type="text" name="modelo" placeholder="Modelo" required>
+            <input type="number" name="ano" placeholder="Ano" required>
+            
+            <select name="acao" required>
+                <option value="atualizar">Atualizar</option>
+                <option value="remover">Remover</option>
+                <option value="vender">Vender</option>
+            </select>
+            
+            <div id="campos-atualizar">
+                <input type="text" name="novamarca" placeholder="Nova Marca">
+                <input type="text" name="novomodelo" placeholder="Novo Modelo">
+                <input type="number" name="novoano" placeholder="Novo Ano">
+                <input type="number" name="novaqtde" placeholder="Nova Quantidade">
+            </div>
+            
+            <button type="submit">Executar Ação</button>
+        </form>
+    </div>
+</body>
+</html>
